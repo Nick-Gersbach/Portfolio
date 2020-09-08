@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nick Gersbach | Web Dev</title>
+    <link rel="shortcut icon" type="image/png" href="/img/branded-favicon.png">
+    <link rel="stylesheet" href="./main.css">
+    <script src="https://kit.fontawesome.com/293abf4b96.js" crossorigin="anonymous"></script>
+
+    <!-- Colors
+    orange - #bc4222
+    dark color - #18263a
+    ligth color (text) - #e2e6e6
+    other light text - 	#f3f4f6 (primary)
+    -->
+</head>
+
+<body>
+    <header id="home">
+        <nav>
+            <img src="/img/branded-logo.png" alt="logo" class="logo">
+            <ul class="main-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#nav-about">About</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact-me">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="container">
+            <div class="type-text">
+                <h1>Hi! I'm Nick! A <span class="txt-type" data-wait="3000"
+                        data-words='["Self Taught Developer", "Problem Solver", "Creator"]'></span></h1>
+                <p>I solve problems with code</p>
+                <a href="#work">View My Work</a>
+            </div>
+        </div>
+    </header>
+    <section id="nav-about" class="about">
+        <div class="container">
+            <h2 class="section-header">About</h2>
+            <div class="about-me">
+                <div>
+                    <img src="/img/about-selfie.jpg" alt="Nick" class="selfie">
+                </div>
+                <div>
+                    <h2>A little about me...</h2>
+                    <p>I started my coding journey in 2012 when I customized my first wordpress website. I decided to
+                        make a career change in 2020 and pursue web development.</p>
+                    <div class="my-skills">
+                        <h2>My Skills</h2>
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <i class="fab fa-js"></i>
+                        <i class="fab fa-bootstrap"></i>
+                        <i class="fab fa-sass"></i>
+                        <i class="fab fa-node"></i>
+                        <i class="fab fa-npm"></i>
+                        <i class="fab fa-wordpress"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="my-work">
+        <div class="container">
+            <h2 class="section-header">My Work</h2>
+            <div class="bottom-border"></div>
+            <div class="work-grid">
+                <div>
+                    <img src="/img/saul-v2.png" alt="saul goodman saul-goodman-website">
+                    <p>This simple responsive website taught me the old school way of positioning elements using floats.
+                        I made it a point to learn the old ways of doing things so that I could better understand older
+                        legacy code.</p>
+                    <ul>
+                        <li><a href="#" class="view-code">View Code<i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="view-demo">View Demo<i class="fas fa-desktop"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="/img/microsoft-landing.png" alt="microsoft">
+                    <p>Recreating the Microsoft landing page taught me the fundamentals of using css grid and flexbox
+                        together on a website. I also learned how to make a mobile hamburger menu with JavaScript.</p>
+                    <ul>
+                        <li><a href="#" class="view-code">View Code<i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="view-demo">View Demo<i class="fas fa-desktop"></i></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="/img/airbnb-website.png" alt="airbnb">
+                    <p>Replicating Airbnb cemented my html and css knowelege and gave me the confidence I needed to move
+                        onto frameworks and programming languages. This was my AHA! moment.</p>
+                    <ul>
+                        <li><a href="#" class="view-code">View Code<i class="fab fa-github"></i></a></li>
+                        <li><a href="#" class="view-demo">View Demo<i class="fas fa-desktop"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact-me" class="contact">
+        <div class="container">
+            <h2 class="section-header">Contact</h2>
+            <form action="">
+                <div class="form-control">
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="John Doe" required>
+                </div>
+                <div class="form-control">
+                    <label for="email">Email:</label>
+                    <input type="email" placeholder="johndoe@gmail.com" required>
+                </div>
+                <div class="form-control">
+                    <textarea name="" id="" cols="30" rows="10" required>Message</textarea>
+                </div>
+                <button class="submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <ul class="social-media-links">
+                <li>Copyright 2020</li>
+                <li>Nick Gersbach</li>
+                <li>Web Developer</li>
+                <li><a href="https://www.linkedin.com/in/nicholas-gersbach-12600b155" target="_blank"><i
+                            class="fab fa-linkedin"></i></a></li>
+                <li><a href="https://www.github.com/Nick-Gersbach" target="_blank"><i class="fab fa-github"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+            $('#navbar a, .btn').on('click', function (e) {
+                if (this.hash !== '') {
+                    e.preventDefault();
+
+                    const hash = this.hash;
+
+                    $('html, body').animate(
+                        {
+                            scrollTop: $(hash).offset().top - 100,
+                        },
+                        800
+                    );
+                }
+            });
+        </script>
+    <script src="/js/app.js"></script>
+</body>
+
+</html>
